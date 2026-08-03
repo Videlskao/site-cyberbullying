@@ -1,48 +1,230 @@
-/* Configurações Globais */
+/* ==========================================================================
+   1. CONFIGURAÇÕES GERAIS E VARIÁVEIS DE COR (Cores Naturais/Institucionais)
+   ========================================================================== */
+
+:root {
+    --primary-color: #1e3a8a;      /* Azul escuro corporativo */
+    --primary-hover: #1e40af;      /* Azul intermediário */
+    --secondary-color: #0d9488;    /* Verde azulado/Teal */
+    --accent-color: #b91c1c;       /* Vermelho sóbrio para alertas */
+    --bg-main: #f8fafc;            /* Fundo em cinza bem claro */
+    --bg-card: #ffffff;            /* Fundo dos cards em branco */
+    --text-primary: #1e293b;       /* Texto escuro principal */
+    --text-muted: #64748b;         /* Texto secundário/suave */
+    --border-color: #e2e8f0;       /* Cor das bordas e divisores */
+    --shadow-soft: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    --shadow-medium: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #0f172a;
-    color: #f8fafc;
-    line-height: 1.6;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
 }
 
-/* Cabeçalho com Gradiente Vibrante */
-header {
-    background: linear-gradient(135deg, #7c3aed 0%, #db2777 50%, #f59e0b 100%);
-    padding: 60px 20px;
+/* ==========================================================================
+   2. BARRA DE NAVEGAÇÃO (NAVBAR)
+   ========================================================================== */
+
+.navbar {
+    background-color: var(--bg-card);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--shadow-soft);
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.btn-nav {
+    background-color: var(--primary-color);
+    color: white !important;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease !important;
+}
+
+.btn-nav:hover {
+    background-color: var(--primary-hover) !important;
+}
+
+/* ==========================================================================
+   3. SEÇÃO HERO (CABEÇALHO)
+   ========================================================================== */
+
+.hero {
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+    color: white;
+    padding: 80px 20px;
     text-align: center;
-    box-shadow: 0 4px 20px rgba(219, 39, 119, 0.3);
 }
 
-.header-container {
+.hero-container {
     max-width: 800px;
     margin: 0 auto;
 }
 
 .badge {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #e2e8f0;
     padding: 6px 16px;
     border-radius: 20px;
     font-size: 0.85rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
     display: inline-block;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
-header h1 {
-    font-size: 2.8rem;
+.hero h1 {
+    font-size: 2.75rem;
     font-weight: 800;
-    margin-bottom: 10px;
+    line-height: 1.2;
+    margin-bottom: 20px;
 }
 
-header p {
-    font-size: 1.2rem;
-    opacity: 0.95;
+.hero p {
+    font-size: 1.15rem;
+    color: #cbd5e1;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.btn-primary {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #0f766e;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ==========================================================================
+   4. CONTEÚDO PRINCIPAL E CARDS
+   ========================================================================== */
+
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 35px;
+    margin-bottom: 35px;
+    box-shadow: var(--shadow-soft);
+}
+
+.card-header {
+    border-bottom: 2px solid var(--bg-main);
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+}
+
+.card-header h2 {
+    color: var(--primary-color);
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.sub-title {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    display: block;
+    margin-top: 4px;
+}
+
+.card-body p {
+    margin-bottom: 15px;
+    color: var(--text-primary);
+}
+
+.card-body p:last-child {
+    margin-bottom: 0;
+}
+
+/* ==========================================================================
+   5. GRID DE CARDS E LISTAS
+   ========================================================================== */
+
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.mini-card {
+    background-color:
