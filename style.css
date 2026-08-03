@@ -1,381 +1,93 @@
-/* ==========================================================================
-   1. VARIÁVEIS E BASE (Cores Naturais e Limpas)
-   ========================================================================== */
-
-:root {
-    --bg-app: #f1f5f9;
-    --bg-sidebar: #0f172a;
-    --bg-card: #ffffff;
-    
-    --color-primary: #2563eb;       /* Azul institucional */
-    --color-primary-dark: #1d4ed8;
-    --color-secondary: #059669;     /* Verde sóbrio */
-    --color-danger: #dc2626;        /* Vermelho alerta */
-    
-    --text-main: #1e293b;
-    --text-muted: #64748b;
-    --text-light: #f8fafc;
-    
-    --border-light: #e2e8f0;
-    --radius-main: 10px;
-    --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
-    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-    background-color: var(--bg-app);
-    color: var(--text-main);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f1f5f9;
+    color: #0f172a;
     line-height: 1.6;
 }
 
-/* ==========================================================================
-   2. LAYOUT COM SIDEBAR
-   ========================================================================== */
-
-.app-layout {
-    display: flex;
-    min-height: 100vh;
+/* Cabeçalho */
+header {
+    background-color: #1e3a8a;
+    color: #ffffff;
+    padding: 50px 20px;
+    text-align: center;
 }
 
-/* Sidebar Fixa */
-.sidebar {
-    width: 260px;
-    background-color: var(--bg-sidebar);
-    color: var(--text-light);
-    padding: 30px 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: fixed;
-    height: 100vh;
-    box-sizing: border-box;
-}
-
-.brand {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.logo-icon {
-    font-size: 2rem;
-}
-
-.brand h2 {
-    font-size: 1.2rem;
-    color: var(--text-light);
-    line-height: 1;
-}
-
-.sub-brand {
-    font-size: 0.8rem;
-    color: var(--color-primary);
-    font-weight: bold;
-}
-
-.sidebar-nav {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    margin-top: 40px;
-}
-
-.nav-item {
-    color: #94a3b8;
-    text-decoration: none;
-    padding: 12px 16px;
-    border-radius: 6px;
-    font-size: 0.95rem;
-    transition: all 0.2s ease;
-}
-
-.nav-item:hover, .nav-item.active {
-    background-color: #1e293b;
-    color: var(--text-light);
-}
-
-.nav-item.highlight {
-    background-color: rgba(37, 99, 235, 0.15);
-    color: #60a5fa;
-    border: 1px solid rgba(37, 99, 235, 0.3);
-}
-
-.sidebar-footer p {
-    font-size: 0.8rem;
-    color: #64748b;
-}
-
-/* Conteúdo Principal */
-.main-content {
-    margin-left: 260px;
-    flex: 1;
-    padding: 40px;
-    max-width: 1000px;
-}
-
-/* ==========================================================================
-   3. BANNER E SEÇÕES
-   ========================================================================== */
-
-.banner {
-    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-    color: var(--text-light);
-    padding: 40px;
-    border-radius: var(--radius-main);
-    margin-bottom: 40px;
-    box-shadow: var(--shadow-soft);
-}
-
-.tag {
-    background-color: var(--color-primary);
-    color: white;
-    font-size: 0.75rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    padding: 4px 10px;
-    border-radius: 4px;
-}
-
-.banner h1 {
+header h1 {
     font-size: 2.2rem;
-    margin: 15px 0 10px 0;
-}
-
-.banner p {
-    color: #cbd5e1;
-    font-size: 1.05rem;
-}
-
-.section-block {
-    margin-bottom: 45px;
-}
-
-.section-title {
-    margin-bottom: 20px;
-}
-
-.section-title h2 {
-    font-size: 1.5rem;
-    color: var(--text-main);
-}
-
-.section-title p {
-    color: var(--text-muted);
-    font-size: 0.9rem;
-}
-
-/* ==========================================================================
-   4. CARDS E COMPONENTES
-   ========================================================================== */
-
-.content-box {
-    background-color: var(--bg-card);
-    padding: 25px;
-    border-radius: var(--radius-main);
-    border: 1px solid var(--border-light);
-    box-shadow: var(--shadow-soft);
-}
-
-.info-callout {
-    margin-top: 15px;
-    background-color: #eff6ff;
-    border-left: 4px solid var(--color-primary);
-    padding: 12px 16px;
-    border-radius: 0 6px 6px 0;
-    font-size: 0.95rem;
-    color: #1e40af;
-}
-
-.cards-flex {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-}
-
-.feature-card {
-    background-color: var(--bg-card);
-    border: 1px solid var(--border-light);
-    border-radius: var(--radius-main);
-    padding: 20px;
-    box-shadow: var(--shadow-soft);
-}
-
-.card-icon {
-    font-weight: 800;
-    color: var(--color-primary);
-    font-size: 1.2rem;
     margin-bottom: 10px;
 }
 
-.feature-card h3 {
-    font-size: 1.05rem;
-    margin-bottom: 8px;
-}
-
-.feature-card p {
-    font-size: 0.9rem;
-    color: var(--text-muted);
-}
-
-/* Layout Dividido */
-.split-box {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    background-color: var(--bg-card);
-    padding: 25px;
-    border-radius: var(--radius-main);
-    border: 1px solid var(--border-light);
-}
-
-.split-col h3 {
+header p {
+    color: #93c5fd;
     font-size: 1.1rem;
-    color: var(--color-primary);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Container Principal */
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* Cards do Conteúdo */
+.card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.card h2 {
+    color: #1e3a8a;
     margin-bottom: 12px;
+    font-size: 1.4rem;
+    border-bottom: 2px solid #f1f5f9;
+    padding-bottom: 8px;
 }
 
-.bullet-list {
-    list-style: none;
-}
-
-.bullet-list li {
-    font-size: 0.9rem;
-    color: var(--text-muted);
-    margin-bottom: 8px;
-    padding-left: 15px;
-    position: relative;
-}
-
-.bullet-list li::before {
-    content: "›";
-    position: absolute;
-    left: 0;
-    color: var(--color-primary);
-    font-weight: bold;
-}
-
-/* Timeline */
-.timeline {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.timeline-step {
-    display: flex;
-    gap: 20px;
-    background-color: var(--bg-card);
-    padding: 20px;
-    border-radius: var(--radius-main);
-    border: 1px solid var(--border-light);
-    align-items: center;
-}
-
-.step-badge {
-    background-color: var(--color-secondary);
-    color: white;
-    font-size: 0.8rem;
-    font-weight: bold;
-    padding: 6px 12px;
-    border-radius: 20px;
-    white-space: nowrap;
-}
-
-.step-content h4 {
-    font-size: 1rem;
-    color: var(--text-main);
-}
-
-.step-content p {
-    font-size: 0.9rem;
-    color: var(--text-muted);
-}
-
-/* Call to Action Banner */
-.action-banner {
-    background-color: #1e293b;
-    color: var(--text-light);
-    padding: 35px;
-    border-radius: var(--radius-main);
-    text-align: center;
-}
-
-.action-banner h2 {
+.card p {
+    color: #334155;
     margin-bottom: 10px;
 }
 
-.action-banner p {
-    color: #94a3b8;
-    margin-bottom: 20px;
+/* Lista de Passos */
+.passos {
+    list-style: none;
+    padding: 0;
 }
 
-.action-buttons {
+.passos li {
+    background-color: #f8fafc;
+    border-left: 4px solid #2563eb;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border-radius: 0 6px 6px 0;
+}
+
+.passos strong {
+    color: #1e3a8a;
+}
+
+/* Botões de Ajuda */
+.area-botoes {
     display: flex;
-    gap: 15px;
-    justify-content: center;
+    gap: 12px;
     flex-wrap: wrap;
+    margin-top: 15px;
 }
 
-.btn-action {
-    padding: 10px 20px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.9rem;
-}
-
-.btn-action.primary {
-    background-color: var(--color-primary);
-    color: white;
-}
-
-.btn-action.secondary {
-    background-color: transparent;
-    color: white;
-    border: 1px solid #475569;
-}
-
-/* Rodapé */
-.site-footer {
-    text-align: center;
-    padding-top: 20px;
-    border-top: 1px solid var(--border-light);
-    color: var(--text-muted);
-    font-size: 0.85rem;
-}
-
-/* ==========================================================================
-   5. RESPONSIVIDADE
-   ========================================================================== */
-
-@media (max-width: 850px) {
-    .app-layout {
-        flex-direction: column;
-    }
-
-    .sidebar {
-        width: 100%;
-        height: auto;
-        position: relative;
-        padding: 20px;
-    }
-
-    .main-content {
-        margin-left: 0;
-        padding: 20px;
-    }
-
-    .split-box {
-        grid-template-columns: 1fr;
-    }
-}
+.btn {
+    display: inline-block;
+    background-color: #2563eb;
+    color: #ffffff;

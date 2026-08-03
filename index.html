@@ -3,136 +3,179 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cidadania Digital - Guia de Prevenção e Combate</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Portal Cidadania Digital - Prevenção ao Cyberbullying</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f1f5f9;
+            color: #0f172a;
+            line-height: 1.6;
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: #1e3a8a;
+            color: #ffffff;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            color: #93c5fd;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Container Principal */
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        /* Cards do Conteúdo */
+        .card {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .card h2 {
+            color: #1e3a8a;
+            margin-bottom: 12px;
+            font-size: 1.4rem;
+            border-bottom: 2px solid #f1f5f9;
+            padding-bottom: 8px;
+        }
+
+        .card p {
+            color: #334155;
+            margin-bottom: 10px;
+        }
+
+        /* Lista de Passos */
+        .passos {
+            list-style: none;
+            padding: 0;
+        }
+
+        .passos li {
+            background-color: #f8fafc;
+            border-left: 4px solid #2563eb;
+            padding: 12px 15px;
+            margin-bottom: 10px;
+            border-radius: 0 6px 6px 0;
+        }
+
+        .passos strong {
+            color: #1e3a8a;
+        }
+
+        /* Botões de Ajuda */
+        .area-botoes {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #2563eb;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 0.95rem;
+        }
+
+        .btn:hover {
+            background-color: #1d4ed8;
+        }
+
+        .btn-alt {
+            background-color: #0d9488;
+        }
+
+        .btn-alt:hover {
+            background-color: #0f766e;
+        }
+
+        /* Rodapé */
+        footer {
+            text-align: center;
+            padding: 25px 20px;
+            color: #64748b;
+            font-size: 0.85rem;
+            border-top: 1px solid #e2e8f0;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
 
-    <div class="app-layout">
+    <header>
+        <h1>🛡️ Portal Cidadania Digital</h1>
+        <p>Guia prático de prevenção, identificação e combate ao cyberbullying no ambiente virtual.</p>
+    </header>
 
-        <aside class="sidebar">
-            <div class="brand">
-                <div class="logo-icon">🌐</div>
-                <div>
-                    <h2>Cidadania</h2>
-                    <span class="sub-brand">Digital</span>
-                </div>
+    <main class="container">
+
+        <section class="card">
+            <h2>📱 O que é Cyberbullying?</h2>
+            <p>O cyberbullying é a violência psicológica praticada por meio da internet, redes sociais e aplicativos de mensagem. Ele se caracteriza por agressões repetitivas, humilhações, perseguições ou difamações contra uma pessoa.</p>
+        </section>
+
+        <section class="card">
+            <h2>⚠️ Principais Formas de Agressão</h2>
+            <p>Fique atento aos comportamentos mais comuns praticados no meio digital:</p>
+            <ul class="passos">
+                <li><strong>Exposição sem autorização:</strong> Vazar conversas privadas, fotos ou dados pessoais.</li>
+                <li><strong>Perfis falsos:</strong> Criar contas fakes para difamar ou xingar alguém.</li>
+                <li><strong>Exclusão intencional:</strong> Isolamento proposital de grupos de mensagens ou comunidades.</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>🛡️ Como Agir se Acontecer com Você</h2>
+            <ul class="passos">
+                <li><strong>1. Não responda:</strong> Evite reagir às provocações diretamente.</li>
+                <li><strong>2. Guarde as provas:</strong> Tire capturas de tela (prints) com datas, nomes e links.</li>
+                <li><strong>3. Bloqueie e denuncie:</strong> Use os botões de denúncia da própria rede social.</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>🚨 Onde Pedir Ajuda</h2>
+            <p>Se precisar de suporte ou orientação anônima, utilize os canais abaixo:</p>
+            <div class="area-botoes">
+                <a href="https://new.safernet.org.br/helpline" target="_blank" class="btn">Apoio Emocional (SaferNet)</a>
+                <a href="https://denuncia.safernet.org.br/" target="_blank" class="btn btn-alt">Central de Denúncias</a>
             </div>
+        </section>
 
-            <nav class="sidebar-nav">
-                <a href="#introducao" class="nav-item active">📍 Visão Geral</a>
-                <a href="#pilares" class="nav-item">🏛️ Pilares da Violência</a>
-                <a href="#impactos" class="nav-item">📉 Consequências</a>
-                <a href="#boas-praticas" class="nav-item">✅ Boas Práticas</a>
-                <a href="#denunciar" class="nav-item highlight">🚨 Como Denunciar</a>
-            </nav>
+    </main>
 
-            <div class="sidebar-footer">
-                <p>Iniciativa de Segurança em Rede</p>
-            </div>
-        </aside>
+    <footer>
+        <p>&copy; 2026 Portal Cidadania Digital | Criado para conscientização e segurança na rede.</p>
+    </footer>
 
-        <main class="main-content">
-
-            <header class="banner" id="introducao">
-                <div class="banner-text">
-                    <span class="tag">Guia Oficial</span>
-                    <h1>Combate ao Cyberbullying</h1>
-                    <p>Orientação técnica e prática para identificar, deter e reportar comportamentos abusivos no ambiente virtual.</p>
-                </div>
-            </header>
-
-            <section class="section-block">
-                <div class="section-title">
-                    <h2>Compreendendo o Fenômeno</h2>
-                    <p>Entenda a dinâmica do assédio em plataformas digitais</p>
-                </div>
-                
-                <div class="content-box">
-                    <p>
-                        O <strong>cyberbullying</strong> é a prática de atos repetitivos de violência psicológica exercidos por meio das tecnologias digitais. Ele se difere das formas tradicionais de intimidação pela capacidade de amplificação, pelo anonimato parcial dos agressores e pela persistência temporal dos conteúdos divulgados.
-                    </p>
-                    <div class="info-callout">
-                        📌 <strong>Atenção:</strong> Mensagens de ódio, vazamento de dados, criação de perfis fakes e exclusão deliberada de grupos são manifestações diretas dessa prática.
-                    </div>
-                </div>
-            </section>
-
-            <section class="section-block" id="pilares">
-                <div class="section-title">
-                    <h2>Como o Cyberbullying se Manifesta</h2>
-                    <p>Principais categorias de ataques registrados online</p>
-                </div>
-
-                <div class="cards-flex">
-                    <article class="feature-card">
-                        <div class="card-icon">01</div>
-                        <h3>Perseguição (Cyberstalking)</h3>
-                        <p>Acompanhamento obsessivo das atividades online da vítima, acompanhado de ameaças ou mensagens invasivas contínuas.</p>
-                    </article>
-
-                    <article class="feature-card">
-                        <div class="card-icon">02</div>
-                        <h3>Falsificação de Identidade</h3>
-                        <p>Uso indevido de fotos e dados para criar contas falsas destinadas a atribuir atitudes desrespeitosas à vítima.</p>
-                    </article>
-
-                    <article class="feature-card">
-                        <div class="card-icon">03</div>
-                        <h3>Divulgação Não Autorizada</h3>
-                        <p>Exposição ilícita de conversas privadas, imagens ou arquivos confidenciais sem o consentimento do titular.</p>
-                    </article>
-                </div>
-            </section>
-
-            <section class="section-block" id="impactos">
-                <div class="section-title">
-                    <h2>Impactos e Sinais de Alerta</h2>
-                    <p>Indicadores de observação no comportamento do usuário</p>
-                </div>
-
-                <div class="split-box">
-                    <div class="split-col">
-                        <h3>Efeitos Emocionais</h3>
-                        <ul class="bullet-list">
-                            <li>Isolamento voluntário das interações sociais presenciais.</li>
-                            <li>Aumento injustificado de ansiedade ao checar notificações.</li>
-                            <li>Queda drástica no rendimento escolar ou profissional.</li>
-                        </ul>
-                    </div>
-                    <div class="split-col">
-                        <h3>Sinais Físicos e Comportamentais</h3>
-                        <ul class="bullet-list">
-                            <li>Alteração súbita no padrão de uso de dispositivos.</li>
-                            <li>Mudanças recorrentes de humor sem causa aparente.</li>
-                            <li>Afastamento de fóruns ou redes sociais de hábito.</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-            <section class="section-block" id="boas-praticas">
-                <div class="section-title">
-                    <h2>Plano de Ação e Proteção</h2>
-                    <p>Etapas recomendadas para conter o assédio</p>
-                </div>
-
-                <div class="timeline">
-                    <div class="timeline-step">
-                        <div class="step-badge">Passo 1</div>
-                        <div class="step-content">
-                            <h4>Não Reaja de Imediato</h4>
-                            <p>Respostas emotivas costumam alimentar a conduta dos agressores. Mantenha a calma e interrompa a interação.</p>
-                        </div>
-                    </div>
-
-                    <div class="timeline-step">
-                        <div class="step-badge">Passo 2</div>
-                        <div class="step-content">
-                            <h4>Documente as Evidências</h4>
-                            <p>Salve prints, URLs de perfis, datas e horários. Esses dados servem como prova legal para denúncias futuras.</p>
-                        </div>
-                    </div>
-
-                    <div class="timeline-step">
-                        <div class="step-badge">Pass
+</body>
+</html>
